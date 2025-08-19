@@ -9,7 +9,7 @@
 **Task Manager App**
  Built with React + Node.js + Express.js
 
-##Setup & Installation
+##Setup & Installation##
 
 **Prerequisites**
 
@@ -74,8 +74,36 @@ Runs on: `http://localhost:3000`
 * `routes/tasksRoutes.js` — REST endpoints
 * `middleware/tasksMiddleware.js` — in-memory store
 * `server.js` — app & CORS, runs on 4000
-
 ---
+```
+task-manager/
+├── backend/
+│   ├── routes/
+│   │   └── tasksRoutes.js       # API endpoints
+│   ├── middleware/
+│   │   └── tasksMiddleware.js   # In-memory task store
+│   ├── CRUD.js                  # CRUD helpers
+│   ├── server.js                # Express app entry (runs on port 4000)
+│   ├── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── App.js
+│   │   │   ├── TaskList.js
+│   │   │   ├── TaskItem.js
+│   │   │   ├── TaskForm.js
+│   │   │   └── TaskFilter.js
+│   │   ├── styles/
+│   │   │   ├── App.css
+│   │   │   └── TaskList.css
+│   │   └── appHelper.js
+│   ├── public/
+│   ├── package.json
+│
+├── .gitignore
+└── README.md
+```
 
 ##  Data Model
 
@@ -160,27 +188,19 @@ cd frontend && npm start # http://localhost:3000
 ##  Dependencies
 📦 **Backend Dependencies**
 
-express – בניית ה־API וה־server
+express – server וה API בניית
 
-cors – לאפשר קריאות מה־frontend
+cors – frontend קריאה מה
 
-nodemon – להרצת שרת עם auto-reload בזמן פיתוח
+nodemon – auto-reload שרת
 
 📦 **Frontend Dependencies**
 
-react – ספריית UI
-
-react-dom – רינדור ל־DOM
-
-axios – קריאות HTTP ל־backend
+axios – Backend -ל Http קריאות
 
 react-slick – הקרוסלה שמציגה את המשימות
 
 slick-carousel – קבצי CSS ותמיכה עבור הקרוסלה
-
-⚙️ **DevDependencies (Frontend - רק ב)**
-
-vite – bundler להרצת הפרויקט
 
 ##  Notes & Assumptions
 
